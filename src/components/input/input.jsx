@@ -15,7 +15,7 @@ const Input = (props) => {
         return (
             <div id={"input"}>
                 <section className={props.class}>
-                    <input type="password" placeholder={"비밀번호를 입력해주세요"}/>
+                    <input type="password" placeholder={props.text}/>
                 </section>
             </div>
         )
