@@ -20,7 +20,7 @@ const Login = () => {
 
                     <div className={"login-input"}>
                         <p>비밀번호</p>
-                        <Input type={"password"} class={"login"}/>
+                        <Input type={"password"} text={"비밀번호를 입력해주세요"} class={"login"}/>
                     </div>
 
                     <div className={"login-input"}>
