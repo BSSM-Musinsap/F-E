@@ -1,0 +1,64 @@
+#slider {
+    position: relative;
+}
+
+#slider .banners {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(calc(-50% + 1908px));
+
+    width: 5048px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#slider .banners li {
+    float: left;
+
+    width: 1232px;
+    height: 360px;
+}
+
+#slider .banners li div {
+    width: 1232px;
+    height: 360px;
+
+    background: gray;
+}
+
+#slider .buttons {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 1232px;
+    height: 360px;
+}
+
+#slider .buttons li {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.50);
+}
+
+#slider .buttons li:first-child {
+    left: 32px;
+}
+
+#slider .buttons li:last-child {
+    right: 32px;
+}
