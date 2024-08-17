@@ -1,7 +1,7 @@
 import './login.css'
 import '../../../fonts/fonts.css'
 
-import Input from "../../../components/input/input.jsx";
+import Input from "../../../components/input/Input.jsx";
 
 import MUSINSAP from '../../../assets/MUSINSAP.svg'
 import {Link} from "react-router-dom";

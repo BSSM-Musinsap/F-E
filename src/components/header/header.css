@@ -1,0 +1,98 @@
+#header {
+    position: relative;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 1232px;
+    height: 164px;
+}
+
+#header .userData {
+    position: absolute;
+
+    width: 100%;
+    height: 40px;
+
+    top: 42px;
+
+    margin-bottom: 36px;
+}
+
+#header .userData .profile {
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+}
+
+#header .userData .profile .image {
+    padding-left: 24px;
+}
+
+#header .userData .profile p {
+
+    padding-left: 8px;
+    display: inline-block;
+    position: relative;
+
+    top: 50%;
+}
+
+#header .nav {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 607px;
+    height: 46px;
+}
+
+#header .nav ul {
+    display: flex;
+
+     height: 100%;
+
+    justify-content: space-between;
+}
+
+#header .nav ul li {
+    position: relative;
+    display: flex;
+
+    justify-content: space-evenly;
+
+    float: left;
+
+    height: 100%;
+
+    width: 84px;
+}
+
+#header .nav ul li:first-child p {
+    color: #0071D9;
+}
+
+#header .nav ul li p {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22.4px;
+    letter-spacing: -0.32px;
+}
+
+#header .nav ul li:nth-child(2) {
+    border-bottom: 4px solid #0071D9;
+}
