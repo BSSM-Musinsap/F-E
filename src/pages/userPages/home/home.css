@@ -23,3 +23,26 @@ main .cards li {
 main .cards li:nth-child(3) {
     color: black;
 }
+
+main .categories {
+    display: flex;
+
+    justify-content: center;
+
+    width: 1232px;
+    height: 46px;
+
+    position: absolute;
+
+    top: 974px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding-bottom: 48px;
+}
+
+main .categories li {
+    float: left;
+    margin: 0 4px;
+}
