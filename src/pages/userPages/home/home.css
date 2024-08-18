@@ -1,0 +1,25 @@
+main .cards {
+    display: flex;
+
+    justify-content: space-between;
+
+    position: absolute;
+
+    top: 668px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 1232px;
+    height: 226px;
+
+    padding-bottom: 80px;
+}
+
+main .cards li {
+    color: #FFF;
+}
+
+main .cards li:nth-child(3) {
+    color: black;
+}
