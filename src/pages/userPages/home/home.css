@@ -46,3 +46,17 @@ main .categories li {
     float: left;
     margin: 0 4px;
 }
+
+main .items {
+    position: absolute;
+
+    top: 1068px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 1232px;
+    height: auto;
+
+    padding-bottom: 200px;
+}

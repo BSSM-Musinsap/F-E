@@ -4,8 +4,25 @@ import Header from '../../../components/header/Header.jsx'
 import Sliders from "../../../components/sliders/Sliders.jsx";
 import Banner from "../../../components/banner/Banner.jsx"
 import Category from "../../../components/category/Category.jsx";
+import {useEffect, useState} from "react";
+import Item from "../../../components/item/Item.jsx";
 
 const Home = () => {
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        setItems([
+            {
+                id: 1,
+                brand: "가까이 유니언즈",
+                name: "루바토 브이넥 반팔 티셔츠 네이비",
+                originalPrice: 48000,
+                discountPercent: 30,
+                discountedPrice: 30000,
+                image: "a"
+            },
+        ]);
+    }, []);
 
     return (
         <main>
@@ -31,6 +48,22 @@ const Home = () => {
                 <li><Category text={"아우터"}/></li>
                 <li><Category text={"속옷 / 홈웨어"}/></li>
                 <li><Category text={"가방"}/></li>
+            </ul>
+
+            <ul className={"items"}>
+                {items.map((item) => (
+                    <li key={item.id}>
+                        <Item
+                            image={item.image}
+                            brand={item.brand}
+                            name={item.name}
+                            original={item.originalPrice}
+                            discount={item.discountPercent}
+                            price={item.discountedPrice}
+                            favorite={false}
+                        />
+                    </li>
+                ))}
             </ul>
         </main>
     )
