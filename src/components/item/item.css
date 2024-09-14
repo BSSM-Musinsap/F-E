@@ -48,6 +48,41 @@
     top: 52px;
 }
 
+#item .imageFrame .categories {
+    padding: 0;
+
+    position: absolute;
+
+    left: 261px;
+    top: 112px;
+
+    width: 38px;
+    height: fit-content;
+
+    border-radius: 20px;
+
+    background: rgba(0, 0, 0, 0.20);
+    border: 1px solid rgba(0, 0, 0, 0.20);
+
+    transition: 0.2s ease-in-out;
+}
+
+#item .imageFrame .categories p {
+    padding: 20px 10px;
+
+    color: white;
+
+    width: 14px;
+    height: fit-content;
+
+    text-align: center;
+    font-family: Pretendard, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 14px;
+}
+
 #item .brand {
     color: #333;
 

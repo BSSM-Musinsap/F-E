@@ -1,14 +1,21 @@
 import './categoty.css'
-import {useState} from "react";
+import {useContext, useState} from "react";
 
 import close from '../../assets/close.svg'
 
 const Category = (props) => {
+    const { setCheckChange, handleList } = useContext(props.dataContext)
     const [sel, setSel] = useState(false)
+
+    const setter = () => {
+        setCheckChange(sel)
+        setSel(!sel)
+        handleList(props.text)
+    }
 
     return (
         <>
-            <section id={"category"} onClick={() => setSel(!sel)}>
+            <section id={"category"} onClick={setter}>
                 <div className={sel.valueOf()+""}>
                     <ul>
                         <li><p>{props.text}</p></li>

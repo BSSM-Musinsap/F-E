@@ -2,13 +2,19 @@ import './item.css'
 import cart from '../../assets/ABCart.svg'
 import favorites from '../../assets/favorite.svg'
 import SFavorites from '../../assets/SFavorite.svg'
-import { useState, useRef } from 'react'
+import {useState, useRef, useContext} from 'react'
 import { baseURL } from "../../Route.jsx"
+import category from "../category/Category.jsx";
 
 const Item = (props) => {
+    const { categoryList } = useContext(props.dataContext)
     const [isActionBarVisible, setIsActionBarVisible] = useState(false)
     const [isFavorite, setIsFavorite] = useState(props.favorite)
     const itemRef = useRef(null)
+
+    if (!categoryList.includes(props.categories[0]) && categoryList.length > 0) {
+        return <></>
+    }
 
     const handleMouseEnter = () => {
         setIsActionBarVisible(true)
@@ -45,6 +51,10 @@ const Item = (props) => {
                         ) : (
                             <img src={SFavorites} alt="remove to favorite" onClick={handleSetFavorite} />
                         )}
+                </div>
+
+                <div className={"categories"} style={{ opacity: isActionBarVisible ? '100' : '0' }}>
+                    <p>{props.categories[0]}</p>
                 </div>
 
                 <img src={`${baseURL}/api/image/${props.id}`}
