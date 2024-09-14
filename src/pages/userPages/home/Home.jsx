@@ -62,7 +62,7 @@ const Home = (props) => {
                                     original={item.originalPrice}
                                     discount={item.discountPercent}
                                     price={item.discountedPrice}
-                                    favorite={false}
+                                    favorite={item.favorite}
                                 />
                             </li>
                         ))}

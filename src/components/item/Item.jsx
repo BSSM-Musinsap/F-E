@@ -7,6 +7,7 @@ import { baseURL } from "../../Route.jsx"
 
 const Item = (props) => {
     const [isActionBarVisible, setIsActionBarVisible] = useState(false)
+    const [isFavorite, setIsFavorite] = useState(props.favorite)
     const itemRef = useRef(null)
 
     const handleMouseEnter = () => {
@@ -15,6 +16,17 @@ const Item = (props) => {
 
     const handleMouseLeave = () => {
         setIsActionBarVisible(false)
+    }
+
+    const handleSetFavorite = () => {
+        setIsFavorite(!isFavorite)
+
+        const form = new FormData()
+
+        form.append('id', props.id)
+        form.append('favorite', !isFavorite)
+
+        props.server.post("api/favorite", form)
     }
 
     return (
@@ -28,10 +40,10 @@ const Item = (props) => {
                 <div className={"actionBar"} style={{ opacity: isActionBarVisible ? '100' : '0' }}>
                     <img src={cart} alt="add to cart" />
                     {
-                        props.favorite === false ? (
-                            <img src={favorites} alt="add to favorite" />
+                        isFavorite === false ? (
+                            <img src={favorites} alt="add to favorite" onClick={handleSetFavorite} />
                         ) : (
-                            <img src={SFavorites} alt="remove to favorite" />
+                            <img src={SFavorites} alt="remove to favorite" onClick={handleSetFavorite} />
                         )}
                 </div>
 
