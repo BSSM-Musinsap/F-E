@@ -1,3 +1,7 @@
+#item {
+    width: 293px;
+}
+
 #item .imageFrame {
     position: relative;
 
@@ -24,6 +28,8 @@
 
     background: rgba(0, 0, 0, 0.20);
     border: 1px solid rgba(0, 0, 0, 0.20);
+
+    transition: 0.2s ease-in-out;
 }
 
 #item .imageFrame .actionBar img {

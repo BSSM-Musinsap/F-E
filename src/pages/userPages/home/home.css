@@ -48,6 +48,9 @@ main .categories li {
 }
 
 main .items {
+    display: flex;
+    flex-wrap: wrap;
+
     position: absolute;
 
     top: 1068px;
@@ -57,6 +60,18 @@ main .items {
 
     width: 1232px;
     height: auto;
+}
 
-    padding-bottom: 200px;
+main .items li {
+    float: left;
+
+    padding-right: 20px;
+}
+
+main .items li:last-child {
+    padding: 0;
+}
+
+main .items .item-group {
+    padding-bottom: 40px;
 }
