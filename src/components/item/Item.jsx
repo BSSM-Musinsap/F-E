@@ -3,7 +3,7 @@ import cart from '../../assets/ABCart.svg'
 import favorites from '../../assets/favorite.svg'
 import SFavorites from '../../assets/SFavorite.svg'
 import {useState, useRef, useContext} from 'react'
-import { baseURL } from "../../Route.jsx"
+import {baseURL, S3Server} from "../../Route.jsx"
 import category from "../category/Category.jsx";
 
 const Item = (props) => {
@@ -27,12 +27,12 @@ const Item = (props) => {
     const handleSetFavorite = () => {
         setIsFavorite(!isFavorite)
 
-        const form = new FormData()
-
-        form.append('id', props.id)
-        form.append('favorite', !isFavorite)
-
-        props.server.post("api/favorite", form)
+        // const form = new FormData()
+        //
+        // form.append('id', props.id)
+        // form.append('favorite', !isFavorite)
+        //
+        // props.server.post("api/favorite", form)
     }
 
     return (
@@ -57,7 +57,10 @@ const Item = (props) => {
                     <p>{props.categories[0]}</p>
                 </div>
 
-                <img src={`${baseURL}/api/image/${props.id}`}
+                {/*<img src={`${S3Server}${props.product_image_id}`}*/}
+                {/*     className={"image"}*/}
+                {/*     alt="item image" />*/}
+                <img src={`${S3Server}${props.image}`}
                      className={"image"}
                      alt="item image" />
             </div>

@@ -6,6 +6,7 @@ import Home from "./pages/userPages/home/Home.jsx";
 import axios from "axios";
 
 export const baseURL = "http://192.168.0.2:8080"
+export const S3Server = "http://ssh.kangsiwoo.com:9001/api/v1/download-shared-object/"
 
 const apiServer = axios.create({
     baseURL: "http://192.168.0.2:8080"
@@ -17,6 +18,7 @@ function Router() {
             <Routes>
                 <Route path="/" element={<Home
                                             server={apiServer}
+                                            imageServer={S3Server}
                                         />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />

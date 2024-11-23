@@ -1,10 +1,11 @@
 import './banner.css'
+import {S3Server} from "../../Route.jsx";
 
 const Banner = (props) => {
     return (
         <>
             <div id={"banner"}>
-                <p>{props.text}</p>
+                <img src={`${S3Server}${props.id}`} alt="banner"/>
             </div>
         </>
     )
