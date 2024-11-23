@@ -39,7 +39,30 @@ const Home = (props) => {
     }
 
     useEffect(() => {
-        getItems(props.server, setItems)
+        // getItems(props.server, setItems)
+        const items = [
+            {
+                product_id: "UUID",
+                product_brand: "가까이 유니언",
+                product_name: "루바토 브이넥 반팔 티셔츠 네이비",
+                product_price: 48000,
+                product_discount_rate: 30,
+                product_image_id: "",
+                product_category: ["의류"],
+                product_is_wish: false,
+            },
+            {
+                product_id: "UUID",
+                product_brand: "갭",
+                product_name: "레오 리커버리 글로그",
+                product_price: 79000,
+                product_discount_rate: "15",
+                product_image_id: "",
+                product_category: ["신발"],
+                product_is_wish: true,
+            }
+        ]
+        setItems(items)
     }, []);
 
     return (
@@ -75,16 +98,24 @@ const Home = (props) => {
                             {items.slice(index * 4, index * 4 + 4).map((item) => (
                                 <li key={item.id}>
                                     <Item
-                                        id={item.id}
-                                        server={props.server}
-                                        image={item.image}
-                                        brand={item.brand}
-                                        name={item.name}
-                                        original={item.originalPrice}
-                                        discount={item.discountPercent}
-                                        price={item.discountedPrice}
-                                        favorite={item.favorite}
-                                        categories={item.categories}
+                                        id={item.product_id}
+                                        // server={props.server}
+                                        image={item.product_image_id}
+                                        brand={item.product_brand}
+                                        name={item.product_name}
+                                        original={item.product_price.toLocaleString('ko-KR', {
+                                            style: 'decimal',
+                                            maximumFractionDigits: 0
+                                        })}
+                                        discount={item.product_discount_rate}
+                                        price={(item.product_price * (1 - (item.product_discount_rate * 0.01)))
+                                            .toLocaleString('ko-KR', {
+                                            style: 'decimal',
+                                            maximumFractionDigits: 0
+                                            }
+                                        )}
+                                        favorite={item.product_is_wish}
+                                        categories={item.product_category}
                                         dataContext={DataContext}
                                     />
                                 </li>
