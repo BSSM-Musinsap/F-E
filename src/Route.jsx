@@ -22,7 +22,7 @@ function Router() {
                                         />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
-                <Route path="admin/login" element={<AdminLogin />} />
+                <Route path="/admin/login" element={<AdminLogin />} />
             </Routes>
         </BrowserRouter>
     );

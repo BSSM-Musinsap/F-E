@@ -15,8 +15,8 @@ const AdminLogin = () => {
 
                 <section className={"inputs"}>
                     <div className={"login-input"}>
-                        <p>관리자코드</p>
-                        <Input type={"text"} text={"관리자코드를 입력해주세요"} class={"login"}/>
+                        <p>이메일</p>
+                        <Input type={"text"} text={"이메일을 입력해주세요"} class={"login"}/>
                     </div>
 
                     <div className={"login-input"}>
