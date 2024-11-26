@@ -1,0 +1,149 @@
+#myPage {
+    position: relative;
+    top: 0;
+
+    width: 100%;
+}
+
+#myPage .userInfo {
+    position: absolute;
+
+    top: 112px;
+
+    width: 100vw;
+    height: 214px;
+
+    background: #000;
+}
+
+#myPage .userInfo .user {
+    position: absolute;
+
+    width: 1228px;
+    height: 56px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+#myPage .userInfo .user ul li {float: left;
+}
+
+#myPage .userInfo .user ul li:first-child {
+    margin-right: 20px;
+}
+
+#myPage .userInfo .user ul li:nth-child(2) {
+    margin-right: 12px;
+}
+
+#myPage .userInfo .user ul li:nth-child(3) {
+    position: relative;
+    height: 48px;
+}
+
+#myPage .userInfo .user ul li:last-child {
+
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    right: 0;
+}
+
+#myPage .userInfo .user .profile {
+    width: fit-content;
+    height: fit-content;
+}
+
+#myPage .userInfo .user .profile img {
+    width: 56px;
+    height: 56px;
+}
+
+#myPage .userInfo .user .name {
+    font-family: Pretendard, serif;
+    font-size: 40px;
+
+    color: #fff;
+}
+
+#myPage .userInfo .user .level {
+    width: 100px;
+
+    position: absolute;
+    bottom: 0;
+
+    font-family: Pretendard, serif;
+    font-size: 20px;
+
+    color: #fff;
+}
+
+#myPage .userInfo .user .edit {
+    width: 200px;
+    text-align: right;
+
+    font-family: Pretendard, serif;
+    font-size: 14px;
+
+    color: #fff;
+}
+
+#myPage main {
+    position: absolute;
+    top: 326px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+#myPage .wishlist {
+    position: relative;
+
+    margin-top: 64px;
+
+    width: 1232px;
+    height: 503px;
+
+    background: #c7c7c7;
+}
+
+#myPage .wishlist .header {
+    position: relative;
+    height: 28px;
+}
+
+#myPage .wishlist .header div:first-child p {
+    position: absolute;
+    left: 0;
+
+    font-family: Pretendard, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 28px */
+}
+
+#myPage .wishlist .header div:last-child p {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-family: Pretendard, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+}
+
+#myPage .wishlist .header .items {
+    width: 1232px;
+    height: 503px;
+
+    background: #000;
+}

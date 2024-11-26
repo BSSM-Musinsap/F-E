@@ -5,7 +5,7 @@ const Banner = (props) => {
     return (
         <>
             <div id={"banner"}>
-                <img src={`${S3Server}${props.id}`} alt="banner"/>
+                <img src={props.id} alt="banner"/>
             </div>
         </>
     )
