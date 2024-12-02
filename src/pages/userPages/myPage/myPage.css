@@ -138,12 +138,10 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 140%; /* 22.4px */
+    line-height: 140%;
 }
 
-#myPage .wishlist .header .items {
-    width: 1232px;
-    height: 503px;
-
-    background: #000;
+#myPage .wishlist .items {
+    position: absolute;
+    bottom: 0;
 }

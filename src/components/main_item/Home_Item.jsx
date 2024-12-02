@@ -1,20 +1,13 @@
-import './item.css'
+import './Home_item.css'
 import cart from '../../assets/ABCart.svg'
 import favorites from '../../assets/favorite.svg'
 import SFavorites from '../../assets/SFavorite.svg'
 import {useState, useRef, useContext} from 'react'
-import {baseURL, S3Server} from "../../Route.jsx"
-import category from "../category/Category.jsx";
+import {S3Server} from "../../Route.jsx"
 
-const Item = (props) => {
-    const { categoryList } = useContext(props.dataContext)
+const Home_Item = (props) => {
     const [isActionBarVisible, setIsActionBarVisible] = useState(false)
-    const [isFavorite, setIsFavorite] = useState(props.favorite)
     const itemRef = useRef(null)
-
-    if (!categoryList.includes(props.categories[0]) && categoryList.length > 0) {
-        return <></>
-    }
 
     const handleMouseEnter = () => {
         setIsActionBarVisible(true)
@@ -45,12 +38,6 @@ const Item = (props) => {
             <div className={"imageFrame"}>
                 <div className={"actionBar"} style={{ opacity: isActionBarVisible ? '100' : '0' }}>
                     <img src={cart} alt="add to cart" />
-                    {
-                        isFavorite === false ? (
-                            <img src={favorites} alt="add to favorite" onClick={handleSetFavorite} />
-                        ) : (
-                            <img src={SFavorites} alt="remove to favorite" onClick={handleSetFavorite} />
-                        )}
                 </div>
 
                 <div className={"categories"} style={{ opacity: isActionBarVisible ? '100' : '0' }}>
@@ -59,8 +46,8 @@ const Item = (props) => {
 
                 {/*<img src={`${S3Server}${props.product_image_id}`}*/}
                 {/*     className={"image"}*/}
-                {/*     alt="item image" />*/}
-                <img src={`${S3Server}${props.image}`}
+                {/*     alt="main_item image" />*/}
+                <img src={`${S3Server}${props.id}`}
                      className={"image"}
                      alt="item image" />
             </div>
@@ -73,4 +60,4 @@ const Item = (props) => {
     )
 }
 
-export default Item
+export default Home_Item

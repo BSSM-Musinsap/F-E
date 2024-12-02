@@ -2,6 +2,7 @@ import './myPage.css'
 import {useEffect, useState} from "react";
 import Header from "../../../components/header/Header.jsx";
 import {S3Server} from "../../../Route.jsx";
+import MyPage_Item from "../../../components/my-page_item/My-Page_Item.jsx";
 
 const MyPage = () => {
     const [user_data, setUser_data] = useState(null)
@@ -72,7 +73,28 @@ const MyPage = () => {
                         <div><p>전체 보기</p></div>
                     </section>
                     <section className={"items"}>
-
+                        <ul>
+                          <li>
+                            <MyPage_Item
+                              id={user_data.user_wishlist[0].product_id}
+                              brand={user_data.user_wishlist[0].product_brand}
+                              name={user_data.user_wishlist[0].product_name}
+                              original={user_data.user_wishlist[0].product_price.toLocaleString('ko-KR', {
+                                style: 'decimal',
+                                maximumFractionDigits: 0
+                              })}
+                              discount={user_data.user_wishlist[0].product_discount_rate}
+                              price={(user_data.user_wishlist[0].product_price * (1 - (user_data.user_wishlist[0].product_discount_rate * 0.01)))
+                                .toLocaleString('ko-KR', {
+                                    style: 'decimal',
+                                    maximumFractionDigits: 0
+                                  }
+                                )}
+                              favorite={user_data.user_wishlist[0].product_is_wish}
+                              categories={user_data.user_wishlist[0].product_category}
+                            />
+                          </li>
+                        </ul>
                     </section>
                 </section>
             </main>

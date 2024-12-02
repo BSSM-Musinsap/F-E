@@ -5,7 +5,7 @@ import Sliders from "../../../components/sliders/Sliders.jsx"
 import Banner from "../../../components/banner/Banner.jsx"
 import Category from "../../../components/category/Category.jsx"
 import {createContext, useContext, useEffect, useState} from "react"
-import Item from "../../../components/item/Item.jsx"
+import Home_Item from "../../../components/main_item/Home_Item.jsx"
 
 import banner1 from "../../../assets/banners/잡화대전.png"
 import banner2 from "../../../assets/banners/신규 입점.png"
@@ -73,7 +73,7 @@ const Home = (props) => {
     }, []);
 
     return (
-        <main>
+        <main id={"home"}>
             <Header/>
 
             <Sliders/>
@@ -104,7 +104,7 @@ const Home = (props) => {
                         <ul key={index} className={"item-group"}>
                             {items.slice(index * 4, index * 4 + 4).map((item) => (
                                 <li key={item.id}>
-                                    <Item
+                                    <Home_Item
                                         id={item.product_id}
                                         // server={props.server}
                                         image={item.product_image_id}

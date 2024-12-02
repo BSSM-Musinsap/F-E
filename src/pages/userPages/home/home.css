@@ -1,4 +1,4 @@
-main .cards {
+#home .cards {
     display: flex;
 
     justify-content: space-between;
@@ -16,15 +16,15 @@ main .cards {
     padding-bottom: 80px;
 }
 
-main .cards li {
+#home .cards li {
     color: #FFF;
 }
 
-main .cards li:nth-child(3) {
+#home .cards li:nth-child(3) {
     color: black;
 }
 
-main .categories {
+#home .categories {
     display: flex;
 
     justify-content: center;
@@ -42,12 +42,12 @@ main .categories {
     padding-bottom: 48px;
 }
 
-main .categories li {
+#home .categories li {
     float: left;
     margin: 0 4px;
 }
 
-main .items {
+#home .items {
     display: flex;
     flex-wrap: wrap;
 
@@ -62,16 +62,16 @@ main .items {
     height: auto;
 }
 
-main .items li {
+#home .items li {
     float: left;
 
     padding-right: 20px;
 }
 
-main .items li:last-child {
+#home .items li:last-child {
     padding: 0;
 }
 
-main .items .item-group {
+#home .items .item-group {
     padding-bottom: 40px;
 }
