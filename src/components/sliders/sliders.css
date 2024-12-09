@@ -1,64 +1,50 @@
 #slider {
-    position: relative;
+  position: relative;
 }
 
 #slider .banners {
-    position: absolute;
-
-    left: 50%;
-
-    width: 5048px;
-
-    display: flex;
-    justify-content: space-between;
-
-    transition: all 0.6s ease-in-out;
+  position: absolute;
+  left: 50%;
+  width: 5048px;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.6s ease-in-out;
 }
 
 #slider .banners li {
-    float: left;
-
-    width: 1232px;
-    height: 360px;
+  float: left;
+  width: 1232px;
+  height: 360px;
 }
 
 #slider .banners li div {
-    width: 1232px;
-    height: 360px;
-
-    background: gray;
+  width: 1232px;
+  height: 360px;
+  background: gray;
 }
 
 #slider .buttons {
-    position: absolute;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    width: 1232px;
-    height: 360px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1232px;
+  height: 360px;
 }
 
 #slider .buttons li {
-    position: absolute;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    width: 40px;
-    height: 40px;
-
-    border-radius: 50%;
-
-    background: rgba(0, 0, 0, 0.50);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 #slider .buttons li:first-child {
-    left: 32px;
+  left: 32px;
 }
 
 #slider .buttons li:last-child {
-    right: 32px;
+  right: 32px;
 }
