@@ -29,6 +29,7 @@
   transform: translateX(-50%);
   width: 1232px;
   height: 360px;
+  cursor: pointer;
 }
 
 #slider .buttons li {

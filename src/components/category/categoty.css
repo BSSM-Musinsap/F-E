@@ -2,6 +2,7 @@
   width: fit-content;
   height: fit-content;
   border-radius: 23px;
+  cursor: pointer;
 }
 
 #category ul {
