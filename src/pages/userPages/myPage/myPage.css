@@ -86,10 +86,8 @@
 #myPage .userInfo .user .edit {
   width: 200px;
   text-align: right;
-
   font-family: Pretendard, serif;
   font-size: 14px;
-
   color: #fff;
 }
 
@@ -97,43 +95,35 @@
   position: absolute;
   top: 326px;
   left: 50%;
-
   transform: translateX(-50%);
 }
 
 #myPage .wishlist {
-  position: relative;
-
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
   margin-top: 64px;
-
   width: 1232px;
   height: 503px;
-
-  background: #c7c7c7;
 }
 
 #myPage .wishlist .header {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   height: 28px;
 }
 
 #myPage .wishlist .header div:first-child p {
-  position: absolute;
-  left: 0;
-
   font-family: Pretendard, serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 140%; /* 28px */
+  line-height: 140%;
 }
 
 #myPage .wishlist .header div:last-child p {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-
   font-family: Pretendard, serif;
   font-size: 16px;
   font-style: normal;
@@ -141,7 +131,49 @@
   line-height: 140%;
 }
 
-#myPage .wishlist .items {
-  position: absolute;
-  bottom: 0;
+#myPage .wishlist .likeItems {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
+
+#myPage .order {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  margin-top: 64px;
+  width: 1232px;
+  height: 503px;
+}
+
+#myPage .order .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 28px;
+}
+
+#myPage .order .header div:first-child p {
+  font-family: Pretendard, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+#myPage .order .header div:last-child p {
+  font-family: Pretendard, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+#myPage .order .orderItems {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+

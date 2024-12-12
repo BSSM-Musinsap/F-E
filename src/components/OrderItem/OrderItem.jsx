@@ -1,9 +1,9 @@
-import "./myPage.css";
+import "./OrderItem.css";
 import { S3Server } from "@/Route";
 
-const MyPageItem = (props) => {
+const OrderItem = (props) => {
   return (
-    <div id={"my-page-item"}>
+    <div id={"item"}>
       <section>
         <div className={"imageFrame"}>
           {/*<img src={`${S3Server}${props.product_image_id}`}*/}
@@ -15,14 +15,16 @@ const MyPageItem = (props) => {
             alt="item image"
           />
         </div>
-        <p className={"brand"}>{props.brand}</p>
-        <p className={"name"}>{props.name}</p>
-        <p className={"original"}>{props.original}</p>
-        <p className={"discount"}>{props.discount}%</p>
-        <p className={"price"}>{props.price}</p>
+        <div className={"textContainer"}>
+          <p className={"brand"}>{props.brand}</p>
+          <p className={"name"}>{props.name}</p>
+          <p className={"original"}>{props.original}</p>
+          <p className={"discount"}>{props.discount}%</p>
+          <p className={"price"}>{props.price}</p>
+        </div>
       </section>
     </div>
   );
 };
 
-export default MyPageItem;
+export default OrderItem;

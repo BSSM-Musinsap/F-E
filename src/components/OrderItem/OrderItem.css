@@ -1,0 +1,128 @@
+#item {
+  width: 293px;
+}
+
+#item section {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+#item .imageFrame {
+  width: 88px;
+  height: 98px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: #dfdfdf;
+}
+
+#item .imageFrame .actionBar {
+  right: 12px;
+  top: 12px;
+  width: 38px;
+  height: 90px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: 0.2s ease-in-out;
+}
+
+#item .imageFrame .actionBar img {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#item .imageFrame .actionBar img:nth-child(1) {
+  top: 16px;
+}
+
+#item .imageFrame .actionBar img:nth-child(2) {
+  top: 52px;
+}
+
+#item .imageFrame .categories {
+  padding: 0;
+  position: absolute;
+  left: 261px;
+  top: 112px;
+  width: 38px;
+  height: fit-content;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: 0.2s ease-in-out;
+}
+
+#item .imageFrame .categories p {
+  padding: 20px 10px;
+  color: white;
+  width: 14px;
+  height: fit-content;
+  text-align: center;
+  font-family: Pretendard, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px;
+}
+
+#item #textContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#item .brand {
+  color: #333;
+  font-family: Pretendard, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14.4px;
+  letter-spacing: 0.24px;
+  margin-bottom: 8px;
+}
+
+#item .name {
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  font-family: Pretendard, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.4px;
+  letter-spacing: -0.32px;
+  margin-bottom: 16px;
+}
+
+#item .original {
+  text-decoration: line-through;
+  color: #808080;
+  font-family: Pretendard, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14.4px;
+  letter-spacing: 0.24px;
+}
+
+#item .discount {
+  display: inline-block;
+  color: #0071d9;
+  font-family: Pretendard, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.6px;
+}
+
+#item .price {
+  margin-left: 4px;
+  display: inline-block;
+  color: #000;
+  font-family: Pretendard, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19.6px;
+}

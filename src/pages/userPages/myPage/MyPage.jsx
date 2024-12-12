@@ -2,7 +2,8 @@ import "./myPage.css";
 import { useEffect, useState } from "react";
 import Header from "@components/header/Header.jsx";
 import { S3Server } from "@/Route";
-import MyPage_Item from "@components/my-page_item/My-Page_Item.jsx";
+import LikeItem from "@components/LikeItem/LikeItem";
+import OrderItem from "@components/OrderItem/OrderItem";
 
 const MyPage = () => {
   const [user_data, setUser_data] = useState(null);
@@ -20,19 +21,17 @@ const MyPage = () => {
           product_name: "루바토 브이넥 반팔 티셔츠 네이비",
           product_price: 48000,
           product_discount_rate: 30,
-          product_image_id:
-            "aHR0cDovLzEyNy4wLjAuMTo5MDAwL211c2luc2FwL3Byb2R1Y3RzLyVFMSU4NCU4MCVFMSU4NSVBMSVFMSU4NCU4MSVFMSU4NSVBMSVFMSU4NCU4QiVFMSU4NSVCNS0lRTElODQlOEIlRTElODUlQjIlRTElODQlODIlRTElODUlQjUlRTElODQlOEIlRTElODUlQTUlRTElODYlQUIlRTElODQlOEMlRTElODUlQjNfJUUxJTg0JTg1JUUxJTg1JUFFJUUxJTg0JTg3JUUxJTg1JUExJUUxJTg0JTkwJUUxJTg1JUE5LSVFMSU4NCU4NyVFMSU4NSVCMyVFMSU4NCU4QiVFMSU4NSVCNSVFMSU4NCU4MiVFMSU4NSVBNiVFMSU4NiVBOC0lRTElODQlODclRTElODUlQTElRTElODYlQUIlRTElODQlOTElRTElODUlQTElRTElODYlQUYtJUUxJTg0JTkwJUUxJTg1JUI1JUUxJTg0JTg5JUUxJTg1JUE3JUUxJTg0JThFJUUxJTg1JUIzLSVFMSU4NCU4MiVFMSU4NSVBNiVFMSU4NCU4QiVFMSU4NSVCNSVFMSU4NCU4NyVFMSU4NSVCNS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BTUo2RDY1SERBVDNFWkM5UTFNTyUyRjIwMjQxMTIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTEyM1QxNDU4MDlaJlgtQW16LUV4cGlyZXM9NDMyMDAmWC1BbXotU2VjdXJpdHktVG9rZW49ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmhZMk5sYzNOTFpYa2lPaUpCVFVvMlJEWTFTRVJCVkRORldrTTVVVEZOVHlJc0ltVjRjQ0k2TVRjek1qUXdPVEUwTnl3aWNHRnlaVzUwSWpvaWJYbDFjMlZ5SW4wLjBONl9naEFBc3NxdURoUVYzcEg2SEVuWC1MM3FfSHRGNEhpOUdaM25FTW1xRnZFek43T000UzBCSHpZS2lYaHNXOTJGcloweE8yUk9mMklIb2ZrZEVRJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZ2ZXJzaW9uSWQ9bnVsbCZYLUFtei1TaWduYXR1cmU9ZWMzZGZhZTZlNWU2MmMxY2U4ZDdlMDQ1Yjk2NjNjMTk3YzYzMDFjMDFiYWNhODg5OWJiZWM0NzA4ZWUyMjU5OQ",
+          product_image_id: "example_image_url",
           product_category: ["의류"],
           product_is_wish: false,
         },
         {
-          product_id: "UUID",
+          product_id: "UUID2",
           product_brand: "갭",
           product_name: "레오 리커버리 글로그",
           product_price: 79000,
-          product_discount_rate: "15",
-          product_image_id:
-            "aHR0cDovLzEyNy4wLjAuMTo5MDAwL211c2luc2FwL3Byb2R1Y3RzLyVFMSU4NCU4MCVFMSU4NSVBMiVFMSU4NiVCOF8lRTElODQlODUlRTElODUlQTYlRTElODQlOEIlRTElODUlQTktJUUxJTg0JTg1JUUxJTg1JUI1JUUxJTg0JThGJUUxJTg1JUE1JUUxJTg0JTg3JUUxJTg1JUE1JUUxJTg0JTg1JUUxJTg1JUI1LSVFMSU4NCU4MCVFMSU4NSVCMyVFMSU4NiVBRiVFMSU4NCU4NSVFMSU4NSVBOSVFMSU4NCU4MCVFMSU4NSVCMy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BTUo2RDY1SERBVDNFWkM5UTFNTyUyRjIwMjQxMTIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTEyM1QxNDU4MzlaJlgtQW16LUV4cGlyZXM9NDMyMDAmWC1BbXotU2VjdXJpdHktVG9rZW49ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmhZMk5sYzNOTFpYa2lPaUpCVFVvMlJEWTFTRVJCVkRORldrTTVVVEZOVHlJc0ltVjRjQ0k2TVRjek1qUXdPVEUwTnl3aWNHRnlaVzUwSWpvaWJYbDFjMlZ5SW4wLjBONl9naEFBc3NxdURoUVYzcEg2SEVuWC1MM3FfSHRGNEhpOUdaM25FTW1xRnZFek43T000UzBCSHpZS2lYaHNXOTJGcloweE8yUk9mMklIb2ZrZEVRJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZ2ZXJzaW9uSWQ9bnVsbCZYLUFtei1TaWduYXR1cmU9ZTY5MTEyMGJlOTljMjFiOWM2NzhiOWRjNThiMWZhMWNjNTIzODUzMWViNGVjNzdhY2U4YTI3YWIwYjkzM2Q2MA",
+          product_discount_rate: 15,
+          product_image_id: "example_image_url2",
           product_category: ["신발"],
           product_is_wish: true,
         },
@@ -82,34 +81,53 @@ const MyPage = () => {
               <p>전체 보기</p>
             </div>
           </section>
-          <section className={"items"}>
-            <ul>
-              <li>
-                <MyPage_Item
-                  id={user_data.user_wishlist[0].product_id}
-                  brand={user_data.user_wishlist[0].product_brand}
-                  name={user_data.user_wishlist[0].product_name}
-                  original={user_data.user_wishlist[0].product_price.toLocaleString(
-                    "ko-KR",
-                    {
-                      style: "decimal",
-                      maximumFractionDigits: 0,
-                    }
-                  )}
-                  discount={user_data.user_wishlist[0].product_discount_rate}
+          <section className={"likeItems"}>
+            {user_data.user_wishlist.map((item, index) => (
+              <div key={index}>
+                <LikeItem
+                  id={item.product_id}
+                  brand={item.product_brand}
+                  name={item.product_name}
+                  original={item.product_price.toLocaleString("ko-KR")}
+                  discount={item.product_discount_rate}
                   price={(
-                    user_data.user_wishlist[0].product_price *
-                    (1 -
-                      user_data.user_wishlist[0].product_discount_rate * 0.01)
-                  ).toLocaleString("ko-KR", {
-                    style: "decimal",
-                    maximumFractionDigits: 0,
-                  })}
-                  favorite={user_data.user_wishlist[0].product_is_wish}
-                  categories={user_data.user_wishlist[0].product_category}
+                    item.product_price *
+                    (1 - item.product_discount_rate * 0.01)
+                  ).toLocaleString("ko-KR")}
+                  favorite={item.product_is_wish}
+                  categories={item.product_category}
                 />
-              </li>
-            </ul>
+              </div>
+            ))}
+          </section>
+        </section>
+        <section className={"order"}>
+          <section className={"header"}>
+            <div>
+              <p>주문 내역</p>
+            </div>
+            <div>
+              <p>전체 보기</p>
+            </div>
+          </section>
+          <section className={"orderItems"}>
+            {user_data.user_wishlist.map((item, index) => (
+              <div key={index}>
+                <OrderItem
+                  id={item.product_id}
+                  brand={item.product_brand}
+                  name={item.product_name}
+                  original={item.product_price.toLocaleString("ko-KR")}
+                  discount={item.product_discount_rate}
+                  price={(
+                    item.product_price *
+                    (1 - item.product_discount_rate * 0.01)
+                  ).toLocaleString("ko-KR")}
+                  favorite={item.product_is_wish}
+                  categories={item.product_category}
+                />
+              </div>
+            ))}
           </section>
         </section>
       </main>

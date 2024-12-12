@@ -4,13 +4,10 @@
 
 #my-page-item .imageFrame {
   position: relative;
-
   width: 293px;
   height: 329px;
-
   overflow: hidden;
   margin-bottom: 16px;
-
   background: #dfdfdf;
 }
 
