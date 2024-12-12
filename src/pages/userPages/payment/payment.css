@@ -1,0 +1,103 @@
+#myPage {
+  position: relative;
+  top: 0;
+
+  width: 100%;
+}
+
+#myPage .topContent {
+  position: absolute;
+  display: flex;
+  top: 112px;
+  width: 100vw;
+  height: 200px;
+  background: #000;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-left: 208px;
+}
+
+#myPage .topContent .back {
+  display: flex;
+  align-items: center;
+}
+
+#myPage .topContent .back span {
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: white;
+}
+
+#myPage .topContent .title {
+  color: white;
+  font-family: Pretendard;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.8px;
+}
+
+#myPage main {
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  top: 440px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  justify-content: center;
+}
+
+#myPage .paymentList {
+  display: flex;
+  flex-direction: column;
+}
+
+#myPage .paymentList .payItems {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#myPage .order {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  margin-top: 64px;
+  width: 1232px;
+  height: 503px;
+}
+
+#myPage .order .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 28px;
+}
+
+#myPage .order .header div:first-child p {
+  font-family: Pretendard, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+#myPage .order .header div:last-child p {
+  font-family: Pretendard, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+#myPage .order .orderItems {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}

@@ -4,6 +4,10 @@
   gap: 16px;
 }
 
+#item section input {
+  width: 20px;
+}
+
 #item .imageFrame {
   width: 88px;
   height: 98px;
@@ -89,36 +93,45 @@
   line-height: 22.4px;
   letter-spacing: -0.32px;
   margin-bottom: 16px;
+  white-space: nowrap;
 }
 
-#item .original {
-  text-decoration: line-through;
-  color: #808080;
-  font-family: Pretendard, serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 14.4px;
-  letter-spacing: 0.24px;
+#item .countContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 5.5px;
 }
 
-#item .discount {
-  display: inline-block;
-  color: #0071d9;
-  font-family: Pretendard, serif;
-  font-size: 14px;
+#item .countContainer .count {
+  font-family: Pretendard;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 19.6px;
+  line-height: 140%;
+  letter-spacing: -0.32px;
+}
+
+#item .countContainer .plus {
+  border: 0.5px solid var(--gray-400, #808080);
+  display: flex;
+  padding: 2px 6px;
+  align-items: center;
+  cursor: pointer;
+}
+
+#item .countContainer .minus {
+  border: 0.5px solid var(--gray-400, #808080);
+  display: flex;
+  padding: 2px 7.5px;
+  cursor: pointer;
+  align-items: center;
 }
 
 #item .price {
-  margin-left: 4px;
-  display: inline-block;
-  color: #000;
-  font-family: Pretendard, serif;
+  font-family: Pretendard;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
-  line-height: 19.6px;
+  line-height: 140%;
 }

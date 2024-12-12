@@ -3,8 +3,8 @@ import Login from "./pages/userPages/login/Login.jsx";
 import Signup from "./pages/userPages/signup/Signup.jsx";
 import AdminLogin from "./pages/admin/login/AdminLogin.jsx";
 import Home from "./pages/userPages/home/Home.jsx";
-import axios from "axios";
 import MyPage from "./pages/userPages/myPage/MyPage.jsx";
+import Payment from "./pages/userPages/payment/Payment.jsx";
 
 export const baseURL = "http://192.168.0.2:8080";
 export const S3Server =
@@ -18,6 +18,7 @@ function Router() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/my-page" element={<MyPage />} />
+        <Route path="/payment" element={<Payment />} />
         <Route path="/admin/login" element={<AdminLogin />} />
       </Routes>
     </BrowserRouter>
