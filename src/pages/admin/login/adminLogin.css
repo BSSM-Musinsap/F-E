@@ -7,17 +7,37 @@
   height: 548px;
 }
 
-#adminLogin .logo:nth-child(1) {
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.logoCon {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+#adminLogin .loginContainer:nth-child(1) {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  padding-bottom: 120px;
 }
 
-#adminLogin .logo:nth-child(2) {
+#adminLogin .loginContainer:nth-child(2) {
   position: absolute;
   left: calc(50% - 99px);
-  top: 40px;
+  top: 120px;
+}
+
+.logo {
+  height: 60px;
+}
+
+.admin {
+  width: 50px;
 }
 
 #adminLogin .inputs {

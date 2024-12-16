@@ -1,12 +1,13 @@
 import MUSINSAP from "../../assets/MUSINSAP.svg";
 import Cart from "../../assets/shopping_cart.svg";
 import { useEffect, useState } from "react";
-
 import "./header.css";
 import { S3Server } from "../../Route.jsx";
+import { useNavigate } from "react-router-dom";
 
 const Header = (props) => {
   const [userData, setUserData] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!props.myPage) {
@@ -36,7 +37,14 @@ const Header = (props) => {
             alt="사용자 프로필 이미지"
           />
         )}
-        <p>{userData.user_name}</p>
+        <p
+          onClick={() => {
+            "/my-page";
+          }}
+          className="pointer"
+        >
+          {userData.user_name}
+        </p>
       </div>
     ) : (
       <div className="login">
@@ -47,7 +55,14 @@ const Header = (props) => {
   return (
     <header id="header">
       <div className="userData">
-        <img src={MUSINSAP} className="logo" alt="뮤신사 로고" />
+        <img
+          src={MUSINSAP}
+          className="pointer"
+          alt="뮤신사 로고"
+          onClick={() => {
+            navigate("/");
+          }}
+        />
         {mainHeader}
       </div>
       {props.myPage !== true ? (

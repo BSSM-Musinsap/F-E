@@ -2,8 +2,8 @@ import "./myPage.css";
 import { useEffect, useState } from "react";
 import Header from "@components/header/Header.jsx";
 import { S3Server } from "@/Route";
-import LikeItem from "@components/LikeItem/LikeItem";
-import OrderItem from "@components/OrderItem/OrderItem";
+import LikeItem from "@/components/like_item/LikeItem";
+import OrderItem from "@/components/order_item/OrderItem";
 
 const MyPage = () => {
   const [user_data, setUser_data] = useState(null);

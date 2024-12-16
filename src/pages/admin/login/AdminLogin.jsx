@@ -7,8 +7,12 @@ import ADMIN from "@assets/ADMIN.svg";
 const AdminLogin = () => {
   return (
     <div id={"adminLogin"}>
-      <img className="logo" src={MUSINSAP} alt="Musinsap logo" />
-      <img className="logo" src={ADMIN} alt="ADMIN text" />
+      <div className="logos">
+        <div className="logoCon">
+          <img className="logo" src={MUSINSAP} alt="Musinsap logo" />
+          <img className="admin" src={ADMIN} alt="ADMIN text" />
+        </div>
+      </div>
       <section className={"inputs"}>
         <div className={"login-input"}>
           <p>이메일</p>

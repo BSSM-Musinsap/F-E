@@ -37,6 +37,10 @@
   top: 50%;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 #header .nav {
   position: absolute;
 

@@ -2,7 +2,7 @@ import "./payment.css";
 import { useEffect, useState } from "react";
 import Header from "@components/header/Header.jsx";
 import { S3Server } from "@/Route";
-import PayItem from "@/components/PayItem/PayItem.jsx";
+import PayItem from "@/components/pay_item/PayItem.jsx";
 import backIcon from "@/assets/backIcon.svg";
 
 const MyPage = () => {
