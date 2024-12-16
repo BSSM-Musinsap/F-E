@@ -1,14 +1,24 @@
-#item section {
+#payItem section {
   display: flex;
   flex-direction: row;
+  align-Items: center;
+  justify-content: space-between;
   gap: 16px;
+  border-bottom: 1px solid var(--gray-50, #e6e6e6);
+  width: 100%;
 }
 
-#item section input {
+#payItem section .contentContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+#payItem section .contentContainer input {
   width: 20px;
 }
 
-#item .imageFrame {
+#payItem .imageFrame {
   width: 88px;
   height: 98px;
   overflow: hidden;
@@ -16,7 +26,7 @@
   background: #dfdfdf;
 }
 
-#item .imageFrame .actionBar {
+#payItem .imageFrame .actionBar {
   right: 12px;
   top: 12px;
   width: 38px;
@@ -27,20 +37,20 @@
   transition: 0.2s ease-in-out;
 }
 
-#item .imageFrame .actionBar img {
+#payItem .imageFrame .actionBar img {
   left: 50%;
   transform: translateX(-50%);
 }
 
-#item .imageFrame .actionBar img:nth-child(1) {
+#payItem .imageFrame .actionBar img:nth-child(1) {
   top: 16px;
 }
 
-#item .imageFrame .actionBar img:nth-child(2) {
+#payItem .imageFrame .actionBar img:nth-child(2) {
   top: 52px;
 }
 
-#item .imageFrame .categories {
+#payItem .imageFrame .categories {
   padding: 0;
   position: absolute;
   left: 261px;
@@ -53,7 +63,7 @@
   transition: 0.2s ease-in-out;
 }
 
-#item .imageFrame .categories p {
+#payItem .imageFrame .categories p {
   padding: 20px 10px;
   color: white;
   width: 14px;
@@ -66,12 +76,12 @@
   line-height: 14px;
 }
 
-#item #textContainer {
+#payItem #textContainer {
   display: flex;
   flex-direction: column;
 }
 
-#item .brand {
+#payItem .brand {
   color: #333;
   font-family: Pretendard, serif;
   font-size: 12px;
@@ -82,7 +92,7 @@
   margin-bottom: 8px;
 }
 
-#item .name {
+#payItem .payItemName {
   overflow: hidden;
   color: #000;
   text-overflow: ellipsis;
@@ -92,18 +102,18 @@
   font-weight: 400;
   line-height: 22.4px;
   letter-spacing: -0.32px;
-  margin-bottom: 16px;
+  margin-bottom: 4px;
   white-space: nowrap;
 }
 
-#item .countContainer {
+#payItem .countContainer {
   display: flex;
   flex-direction: row;
   gap: 8px;
   margin-bottom: 5.5px;
 }
 
-#item .countContainer .count {
+#payItem .countContainer .count {
   font-family: Pretendard;
   font-size: 16px;
   font-style: normal;
@@ -112,26 +122,30 @@
   letter-spacing: -0.32px;
 }
 
-#item .countContainer .plus {
+#payItem .countContainer .plus {
   border: 0.5px solid var(--gray-400, #808080);
   display: flex;
   padding: 2px 6px;
-  align-items: center;
+  align-payItems: center;
   cursor: pointer;
 }
 
-#item .countContainer .minus {
+#payItem .countContainer .minus {
   border: 0.5px solid var(--gray-400, #808080);
   display: flex;
   padding: 2px 7.5px;
   cursor: pointer;
-  align-items: center;
+  align-payItems: center;
 }
 
-#item .price {
+#payItem .price {
   font-family: Pretendard;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 140%;
+}
+
+#payItem section .remove {
+  cursor: pointer;
 }

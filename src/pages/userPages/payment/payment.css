@@ -1,11 +1,11 @@
-#myPage {
+#payment {
   position: relative;
   top: 0;
 
   width: 100%;
 }
 
-#myPage .topContent {
+#payment .topContent {
   position: absolute;
   display: flex;
   top: 112px;
@@ -17,12 +17,12 @@
   padding-left: 208px;
 }
 
-#myPage .topContent .back {
+#payment .topContent .back {
   display: flex;
   align-items: center;
 }
 
-#myPage .topContent .back span {
+#payment .topContent .back span {
   font-family: Pretendard;
   font-size: 14px;
   font-style: normal;
@@ -31,7 +31,7 @@
   color: white;
 }
 
-#myPage .topContent .title {
+#payment .topContent .title {
   color: white;
   font-family: Pretendard;
   font-size: 40px;
@@ -41,29 +41,30 @@
   letter-spacing: 0.8px;
 }
 
-#myPage main {
+#payment main {
   position: absolute;
   display: flex;
-  justify-content: start;
   top: 440px;
   left: 50%;
   width: 100%;
   transform: translateX(-50%);
   justify-content: center;
-}
-
-#myPage .paymentList {
-  display: flex;
   flex-direction: column;
 }
 
-#myPage .paymentList .payItems {
+#payment .paymentList {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 280px;
+}
+
+#payment .paymentList .payItems {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-#myPage .order {
+#payment .order {
   display: flex;
   gap: 32px;
   flex-direction: column;
@@ -72,7 +73,7 @@
   height: 503px;
 }
 
-#myPage .order .header {
+#payment .order .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -80,7 +81,7 @@
   height: 28px;
 }
 
-#myPage .order .header div:first-child p {
+#payment .order .header div:first-child p {
   font-family: Pretendard, serif;
   font-size: 20px;
   font-style: normal;
@@ -88,7 +89,7 @@
   line-height: 140%;
 }
 
-#myPage .order .header div:last-child p {
+#payment .order .header div:last-child p {
   font-family: Pretendard, serif;
   font-size: 16px;
   font-style: normal;
@@ -96,8 +97,56 @@
   line-height: 140%;
 }
 
-#myPage .order .orderItems {
+#payment .order .orderItems {
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+
+.cost {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 280px;
+}
+
+.allText {
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.allCost {
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.button {
+  width: 502px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  background: #0071d9;
+  color: #fff;
+  font-family: Pretendard, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4em 0 8em 0;
 }

@@ -7,6 +7,7 @@ import backIcon from "@/assets/backIcon.svg";
 
 const MyPage = () => {
   const [user_data, setUser_data] = useState(null);
+  const cost = useState("68,600");
 
   useEffect(() => {
     setUser_data({
@@ -48,7 +49,7 @@ const MyPage = () => {
   }
 
   return (
-    <div id={"myPage"}>
+    <div id={"payment"}>
       <Header myPage={true} />
       <section className={"topContent"}>
         <div className={"back"}>
@@ -79,6 +80,13 @@ const MyPage = () => {
             ))}
           </section>
         </section>
+        <div className="cost">
+          <div className="allText">총 결제 금액</div>
+          <div className="allCost">{cost} 원</div>
+        </div>
+        <div className="buttonContainer">
+          <div className="button">총 {cost}원 구매하기</div>
+        </div>
       </main>
     </div>
   );
