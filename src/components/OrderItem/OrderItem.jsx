@@ -1,18 +1,18 @@
 import "./OrderItem.css";
 import { S3Server } from "@/Route";
 
-const OrderItem = (props) => {
+const OrderorderItem = (props) => {
   return (
-    <div id={"item"}>
+    <div id={"orderItem"}>
       <section>
         <div className={"imageFrame"}>
           {/*<img src={`${S3Server}${props.product_image_id}`}*/}
           {/*     className={"image"}*/}
-          {/*     alt="main_item image" />*/}
+          {/*     alt="main_orderItem image" />*/}
           <img
             src={`${S3Server}${props.id}`}
             className={"image"}
-            alt="item image"
+            alt="orderItem image"
           />
         </div>
         <div className={"textContainer"}>
@@ -27,4 +27,4 @@ const OrderItem = (props) => {
   );
 };
 
-export default OrderItem;
+export default OrderorderItem;

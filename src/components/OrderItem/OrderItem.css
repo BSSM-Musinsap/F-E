@@ -1,10 +1,13 @@
-#item section {
+#orderItem section {
   display: flex;
   flex-direction: row;
+  justify-content: space-between; 
+  align-items: center; 
   gap: 16px;
 }
 
-#item .imageFrame {
+#orderItem .imageFrame {
+  position: relative;
   width: 88px;
   height: 98px;
   overflow: hidden;
@@ -12,7 +15,7 @@
   background: #dfdfdf;
 }
 
-#item .imageFrame .actionBar {
+#orderItem .imageFrame .actionBar {
   right: 12px;
   top: 12px;
   width: 38px;
@@ -23,20 +26,20 @@
   transition: 0.2s ease-in-out;
 }
 
-#item .imageFrame .actionBar img {
+#orderItem .imageFrame .actionBar img {
   left: 50%;
   transform: translateX(-50%);
 }
 
-#item .imageFrame .actionBar img:nth-child(1) {
+#orderItem .imageFrame .actionBar img:nth-child(1) {
   top: 16px;
 }
 
-#item .imageFrame .actionBar img:nth-child(2) {
+#orderItem .imageFrame .actionBar img:nth-child(2) {
   top: 52px;
 }
 
-#item .imageFrame .categories {
+#orderItem .imageFrame .categories {
   padding: 0;
   position: absolute;
   left: 261px;
@@ -49,7 +52,7 @@
   transition: 0.2s ease-in-out;
 }
 
-#item .imageFrame .categories p {
+#orderItem .imageFrame .categories p {
   padding: 20px 10px;
   color: white;
   width: 14px;
@@ -62,12 +65,13 @@
   line-height: 14px;
 }
 
-#item #textContainer {
+#orderItem #textContainer {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
-#item .brand {
+#orderItem .brand {
   color: #333;
   font-family: Pretendard, serif;
   font-size: 12px;
@@ -78,7 +82,7 @@
   margin-bottom: 8px;
 }
 
-#item .name {
+#orderItem .name {
   overflow: hidden;
   color: #000;
   text-overflow: ellipsis;
@@ -91,7 +95,7 @@
   margin-bottom: 16px;
 }
 
-#item .original {
+#orderItem .original {
   text-decoration: line-through;
   color: #808080;
   font-family: Pretendard, serif;
@@ -102,7 +106,7 @@
   letter-spacing: 0.24px;
 }
 
-#item .discount {
+#orderItem .discount {
   display: inline-block;
   color: #0071d9;
   font-family: Pretendard, serif;
@@ -112,7 +116,7 @@
   line-height: 19.6px;
 }
 
-#item .price {
+#orderItem .price {
   margin-left: 4px;
   display: inline-block;
   color: #000;
